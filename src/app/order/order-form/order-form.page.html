@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Order Form
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Order Form</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <form  [formGroup]="orderForm" (ngSubmit)="onSubmit($event)">
+      <ion-item>
+        <ion-label>Require Provider</ion-label>
+        <ion-toggle formControlName="toggle"></ion-toggle>
+      </ion-item>
+
+      <ion-item slot="start">
+        <ion-label>Username:</ion-label>
+        <ion-input formControlName="username"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Password:</ion-label>
+        <ion-input formControlName="password"></ion-input>
+      </ion-item>
+
+
+
+      <app-counter-input formControlName="counter"></app-counter-input>
+
+      <app-add-provider [value]></app-add-provider>
+
+      
+      <ion-button type="submit" (click)="saveAndClose()">Save and Close</ion-button>
+      <ion-button type="submit" (click)="saveAndAddAother()">Save and Add Another</ion-button>
+    </form>
+  
+  </ion-card>
+
+</ion-content>
