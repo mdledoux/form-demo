@@ -1,0 +1,10 @@
+<ion-content>
+  <!-- (click)="onSelectProvider(provider)" -->
+  <ion-item  *ngFor="let provider of filtered"   (click)="closeModal(provider)">
+    <ion-label>
+      <ion-text>{{provider.providerName}}</ion-text>
+      -
+      <ion-text class="resource-copy">{{provider.providerAddress}}</ion-text>
+    </ion-label>
+  </ion-item>
+</ion-content>
