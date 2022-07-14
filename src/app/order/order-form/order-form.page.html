@@ -31,11 +31,16 @@
       </ion-item>
 
 
+      <ion-item>
+        <ion-label>Counter</ion-label>
+        <app-counter-input formControlName="counter"></app-counter-input>
+      </ion-item>
 
-      <app-counter-input formControlName="counter"></app-counter-input>
-
-      <app-add-provider [value]></app-add-provider>
-
+      <ion-item>
+      <!-- [hidden]="!isInjuryDiagnosed" -->
+        <ion-label>Provider:</ion-label>
+        <app-add-provider formControlName="provider"></app-add-provider>
+      </ion-item>
       
       <ion-button type="submit" (click)="saveAndClose()">Save and Close</ion-button>
       <ion-button type="submit" (click)="saveAndAddAother()">Save and Add Another</ion-button>

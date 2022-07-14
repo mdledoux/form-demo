@@ -1,3 +1,9 @@
-<p>
-  add-provider works!
-</p>
+<ion-input
+  (click)="openProviderModal()"
+  readonly
+  id="provider-name"
+  placeholder="Diagnosed By"
+  [value]="value ? value?.providerName : ''"
+  readonly
+>
+</ion-input>

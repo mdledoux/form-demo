@@ -9,6 +9,7 @@ import { OrderFormPageRoutingModule } from './order-form-routing.module';
 import { OrderFormPage } from './order-form.page';
 import { CounterInputComponent } from '../../components/counter-input/counter-input.component';
 import { AddProviderComponent } from '../../components/add-provider/add-provider.component';
+import { ProviderComponent } from '../../components/provider/provider.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { AddProviderComponent } from '../../components/add-provider/add-provider
   declarations: [
     CounterInputComponent,
     AddProviderComponent,
+    ProviderComponent,
     OrderFormPage
   ]
 })
